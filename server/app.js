@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const server = require("http").Server(app);
 const { v4: uuidv4 } = require("uuid");
-app.set("view engine", "ejs");
+app.set('views', path.join(__dirname, 'views'))
 const io = require("socket.io")(server, {
   cors: {
     origin: '*'
