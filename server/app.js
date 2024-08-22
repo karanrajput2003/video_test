@@ -4,9 +4,7 @@ const server = require("http").Server(app);
 const { v4: uuidv4 } = require("uuid");
 app.set('views', path.join(__dirname, 'views'))
 const io = require("socket.io")(server, {
-  cors: {
-    origin: '*'
-  }
+  cors: true,
 });
 const { ExpressPeerServer } = require("peer");
 const opinions = {
